@@ -1,32 +1,35 @@
 package org.example.lv2;
 
+import java.util.ArrayList;
+
 public class Calculator {
-    private int result = 0;
 
-    public int sum(int a, int b) {
-        result = a + b;
-        System.out.println("계산 결과는 " + a + " + " + b + " = " + result + " 입니다.");
-        return result;
-    }
+    public int calculate(int num1, int num2, char operator) {
+        int result = 0;
 
-    public int sub(int a, int b) {
-            result = a - b;
-            System.out.println("계산 결과는 " + a + " - " + b + " = " + result + " 입니다.");
-            return result;
-    }
-
-    public int mul(int a, int b) {
-        result = a * b;
-        System.out.println("계산 결과는 " + a + " × " + b + " = " + result + " 입니다.");
-        return result;
-    }
-
-    public int div(int a, int b) {
-        if (b == 0) {
-            System.out.println("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다.");
-        } else {
-            result = a / b;
-            System.out.println("계산 결과는 " + a + " ÷ " + b + " = " + result + " 입니다.");
+        switch (operator) {
+            case '＋':
+                result = num1 + num2;
+                System.out.println("계산 결과는 " + num1 + " + " + num2 + " = " + result + " 입니다.");
+                break;
+            case '－':
+                result = num1 - num2;
+                System.out.println("계산 결과는 " + num2 + " - " + num2 + " = " + result + " 입니다.");
+                break;
+            case '×':
+                result = num1 * num2;
+                System.out.println("계산 결과는 " + num1 + " * " + num2 + " = " + result + " 입니다.");
+                break;
+            case '÷':
+                if (num2 == 0) {
+                    System.out.println("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다.");
+                } else {
+                    result = num1 / num2;
+                    System.out.println("계산 결과는 " + num1 + " ÷ " + num2 + " = " + result + " 입니다.");
+                }
+                break;
+            default:
+                System.out.println("올바른 연산자를 입력하세요.");
         }
         return result;
     }

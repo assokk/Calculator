@@ -45,24 +45,7 @@ public class App {
             // ==========================
 
             Calculator calc = new Calculator();
-            int result = 0;
-
-            switch (operator) {
-                case '＋':
-                    result = calc.sum(num1, num2);
-                    break;
-                case '－':
-                    result = calc.sub(num1, num2);
-                    break;
-                case '×':
-                    result = calc.mul(num1, num2);
-                    break;
-                case '÷':
-                    result = calc.div(num1, num2);
-                    break;
-                default:
-                    System.out.println("올바른 연산자를 입력하세요.");
-            }
+            int result = calc.calculate(num1, num2, operator);
 
             sc.nextLine();
             System.out.print("더 계산하시겠습니까? (exit 입력 시 종료) ");

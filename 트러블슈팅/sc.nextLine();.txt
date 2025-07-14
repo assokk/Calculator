@@ -1,0 +1,13 @@
+< 자바에서 Scanner 사용 시 
+nextInt()와 nextLine()을 함께 쓸 때 생기는 문제 >
+
+ing age = sc.nextInt();
+String name = sc.nextLine();
+
+이때, 사용자가 25를 입력하고 엔터를 누르면
+25\n이 입력됨. (\n: 줄바꿈 문자)
+nextIn()는 숫자만 읽고 줄바꿈 문자는 내버려두기 때문에
+그 다음으로 nextLine()이 실행됐을 때 
+남아있는 줄바꿈 문자를 읽고, 줄이 끝났다고 판단해서 빈 문자열을 반환함
+
+해서, sc.nextLine(); 으로 남아있는 줄바꿈 문자를 제거해줄 수 있음.
