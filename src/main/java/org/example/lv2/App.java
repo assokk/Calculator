@@ -39,6 +39,7 @@ public class App {
             // 연산자 입력
             System.out.print("사칙연산 기호를 입력하세요.(＋,－,×,÷): ");
             char operator = sc.next().charAt(0);
+            sc.nextLine();
 
 
             // ==========================
@@ -46,9 +47,18 @@ public class App {
             // ==========================
 
             int result = calc.calculate(num1, num2, operator);
+
+            System.out.print("방금 계산한 결과값을 수정하시겠습니까? ");
+            String edit = sc.nextLine();
+
+            if (edit.equals("yes")) {
+                System.out.print("수정할 값을 입력하세요: ");
+                int editResult = sc.nextInt();
+                sc.nextLine();
+                calc.setResults(editResult);
+            }
             System.out.println("계산 결과 목록: " + calc.getResults());
 
-            sc.nextLine();
             System.out.print("더 계산하시겠습니까? (exit 입력 시 종료) ");
             answer = sc.nextLine();
         }

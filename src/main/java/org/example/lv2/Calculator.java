@@ -35,7 +35,12 @@ public class Calculator {
         results.add(result);
         return result;
     }
+
     public ArrayList<Integer> getResults() {
         return results;
+    }
+
+    public void setResults(int newValue) {
+        results.set(results.size() - 1, newValue);
     }
 }
