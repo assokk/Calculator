@@ -3,6 +3,7 @@ package org.example.lv2;
 import java.util.ArrayList;
 
 public class Calculator {
+    private ArrayList<Integer> results = new ArrayList<>();
 
     public int calculate(int num1, int num2, char operator) {
         int result = 0;
