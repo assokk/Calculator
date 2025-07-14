@@ -43,4 +43,8 @@ public class Calculator {
     public void setResults(int newValue) {
         results.set(results.size() - 1, newValue);
     }
+
+    public void removeResult() {
+        results.remove(0);
+    }
 }
