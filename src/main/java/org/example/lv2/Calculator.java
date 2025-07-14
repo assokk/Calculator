@@ -32,6 +32,10 @@ public class Calculator {
             default:
                 System.out.println("올바른 연산자를 입력하세요.");
         }
+        results.add(result);
         return result;
+    }
+    public ArrayList<Integer> getResults() {
+        return results;
     }
 }

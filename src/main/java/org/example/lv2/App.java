@@ -7,6 +7,7 @@ public class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String answer = "";
+        Calculator calc = new Calculator();
 
         while (!answer.equals("exit")) {
             // ==========================
@@ -44,8 +45,8 @@ public class App {
             // 2. 계산 후 결과 출력
             // ==========================
 
-            Calculator calc = new Calculator();
             int result = calc.calculate(num1, num2, operator);
+            System.out.println("계산 결과 목록: " + calc.getResults());
 
             sc.nextLine();
             System.out.print("더 계산하시겠습니까? (exit 입력 시 종료) ");
